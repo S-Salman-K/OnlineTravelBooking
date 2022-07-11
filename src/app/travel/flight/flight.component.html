@@ -6,14 +6,17 @@
         <div>
           <mat-form-field class="example-full-width" appearance="outline">
             <mat-label>Source</mat-label>
-            <input #source (keyup)="filterBySource(source.value.trim())" matInput placeholder="Ex. Kolkata" value="">
+            <!-- <input #source (keyup)="filterBySource(source.value.trim())" matInput placeholder="Ex. Kolkata" value=""> -->
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)]="sourceInp"   #source (keyup)="filterFlights()" matInput placeholder="Ex. Kolkata" value="" >  
           </mat-form-field>
         </div>
 
         <div>
           <mat-form-field class="example-full-width" appearance="outline">
             <mat-label>Destination</mat-label>
-            <input #destination (keyup)="filterByDestination(destination.value.trim())" matInput placeholder="Ex. New Delhi" value="">
+            <!-- <input #destination (keyup)="filterByDestination(destination.value.trim())" matInput placeholder="Ex. New Delhi" value=""> -->
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)]="destinationInp" #destination (keyup)="filterFlights()" matInput placeholder="Ex. New Delhi" value="">
+
           </mat-form-field>
         </div>
 
@@ -48,8 +51,8 @@
       <!-- <app-flight-search></app-flight-search> -->
       <!-- Search Bar -->
       <p>
-        <input #query (keyup)="filter(query.value)" type="text" class="form-control mt-3"
-          placeholder="Search by airline...">
+        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="airlineInp" #query (keyup)="filterFlights()" type="text" class="form-control mt-3" placeholder="Search by airline...">
+        <!-- <input #query (keyup)="filter(query.value)" type="text" class="form-control mt-3" placeholder="Search by airline..." -->
       </p>
 
       <!---datatble starts -->

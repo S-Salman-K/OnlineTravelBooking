@@ -23,10 +23,20 @@ export class FlightComponent implements OnInit {
 
   source:any;
   destination:any;
+  airline:any;
+
+
+  sourceInp:any;
+  destinationInp:any;
+  airlineInp:any;
+
   filteredFilghtsBySource:any;
   filteredFlightsByDestination:any;
 
   constructor(private flightService:FlightService) { 
+    this.sourceInp = "";
+    this.destinationInp = "";
+    this.airlineInp = "";
     this.flightService.getAll().subscribe(flights=> {
       this.filteredFlights=flights; 
       this.flights=flights;
@@ -47,6 +57,21 @@ export class FlightComponent implements OnInit {
       pageLength: 5
     };
   }
+
+  filterFlights(){
+    this.filteredFlights = (this.sourceInp) ? 
+                            this.flights.filter((p:any)=>p.source.toLowerCase().includes(this.sourceInp.toLowerCase()))
+                            :this.flights;
+                            
+    this.filteredFlights = (this.destinationInp) ? 
+                            this.filteredFlights.filter((p:any)=>p.destination.toLowerCase().includes(this.destinationInp.toLowerCase()))
+                            :this.filteredFlights;
+    
+    this.filteredFlights = (this.airlineInp) ? 
+                            this.filteredFlights.filter((p:any)=>p.airline.toLowerCase().includes(this.airlineInp.toLowerCase()))
+                            :this.filteredFlights;
+  }
+
 
   filter(query:any){
     console.log(query);
