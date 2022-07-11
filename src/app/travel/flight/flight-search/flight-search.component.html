@@ -1,0 +1,42 @@
+<!-- Search Bar -->
+<p>
+    <input #query (keyup)="filter(query.value)" type="text" class="form-control mt-3" placeholder="Search by airline...">
+</p>
+
+<!---datatble starts -->
+<table datatable [dtOptions]="dtOptions"  class="row-border hover">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Airline</th>
+        <th>Departure</th>
+        <th>Destination</th>
+        <th>Departure Date</th>
+        <th>Departure Time</th>
+        <th>Arrival Date</th>
+        <th>Arrival Time</th>
+        <th>Price</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let flight of filteredFlights">
+    <td> <img class="airline-logo" src={{flight.imgURL}}></td>
+    <td>{{flight.airline}}</td>
+    <td></td>
+    <td></td>
+    <td>{{flight.deptDate}}</td>
+    <td>{{flight.deptTime}}</td>
+    <td>{{flight.arrDate}}</td>
+    <td>{{flight.arrTime}}</td>
+    <td>&#8377;{{flight.price}}</td>
+    <td>
+        <button mat-raised-button color="warn" [routerLink]="'/booking/'+flight.flightId">Book</button>
+    </td>
+    <!-- <td><a [routerLink]="['/admin/products/', product.key]">Edit</a></td> -->
+    </tr>
+
+    </tbody>
+</table>
+ 

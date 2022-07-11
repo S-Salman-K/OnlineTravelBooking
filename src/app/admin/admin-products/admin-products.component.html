@@ -1,0 +1,61 @@
+<!-- Add Flight Button -->
+<a class="btn btn-primary mt-3" routerLink="/admin/products/new">Add Flight</a>
+
+<!-- Search Bar -->
+<p>
+    <input #query (keyup)="filter(query.value)" type="text" class="form-control mt-3" placeholder="Search...">
+</p>
+
+<!-- <---datatble starts -->
+<table datatable [dtOptions]="dtOptions"  class="row-border hover">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Price</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr> -->
+
+      <tr *ngFor="let product of filteredFlights">
+        <td> <img class="airline-logo" src={{product.imgURL}}></td>
+        <td>{{product.title}}</td>
+        <td>&#8377;{{product.price}}</td>
+        <td><a [routerLink]="['/admin/products/', product.key]">Edit</a></td>
+      </tr>
+
+    </tbody>
+</table>
+  
+<!-- datatable ends -->
+
+
+<!-- Search Result -->
+<!-- <table class="table">
+    
+    <thead>
+        <tr>
+            <th>Logo</th>
+            <th>Airline</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let product of filteredProducts">
+            <td> <img class="airline-logo" src={{product.imgURL}}></td>
+            <td>{{product.title}}</td>
+            <td>&#8377;{{product.price}}</td>
+            <td><a [routerLink]="['/admin/products/', product.key]">Edit</a></td>
+        </tr>
+    </tbody>
+</table> -->

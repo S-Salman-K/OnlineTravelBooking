@@ -22,11 +22,16 @@
       "es2020",
       "dom"
     ]
+    
+    ,
+    // custom firebase compatibility issue override
+    "skipLibCheck": true,
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictT,emplates": true
   }
+
 }

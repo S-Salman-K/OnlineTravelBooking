@@ -1,0 +1,79 @@
+[
+    {
+        "flightId":1,
+        "airline" :"Indigo",
+        "source":"Kolkata",
+        "destination":"Bangalore",
+        "deptDate":"22/10/2022",
+        "deptTime":"10:30",
+        "arrDate":"23/10/2022",
+        "arrTime":"9:30",
+        "price":"1000",
+        "imgURL":"https://www.gstatic.com/flights/airline_logos/70px/6E.png"
+    },
+
+    {
+        "flightId":2,
+        "airline" :"Emirates",
+        "source":"Delhi",
+        "destination":"Bangalore",
+        "deptDate":"25/10/2022",
+        "deptTime":"11:30",
+        "arrDate":"26/10/2022",
+        "arrTime":"19:30",
+        "price":"2000",
+        "imgURL":"https://www.gstatic.com/flights/airline_logos/70px/6E.png"
+    },
+
+    {
+        "flightId":3,
+        "airline" :"Air India",
+        "source":"Chennai",
+        "destination":"Pune",
+        "deptDate":"24/10/2022",
+        "deptTime":"10:30",
+        "arrDate":"25/10/2022",
+        "arrTime":"9:30",
+        "price":"3000",
+        "imgURL":"https://www.gstatic.com/flights/airline_logos/70px/6E.png"
+    },
+
+    {
+        "flightId":4,
+        "airline" :"Spicejet",
+        "source":"Mumbai",
+        "destination":"Bangalore",
+        "deptDate":"22/10/2022",
+        "deptTime":"10:30",
+        "arrDate":"23/10/2022",
+        "arrTime":"9:30",
+        "price":"4000",
+        "imgURL":"https://www.gstatic.com/flights/airline_logos/70px/6E.png"
+    },
+
+    {
+        "flightId":5,
+        "airline" :"Go Air",
+        "source":"Chennai",
+        "destination":"Goa",
+        "deptDate":"22/10/2022",
+        "deptTime":"10:30",
+        "arrDate":"23/10/2022",
+        "arrTime":"9:30",
+        "price":"5000",
+        "imgURL":"https://www.gstatic.com/flights/airline_logos/70px/6E.png"
+    },
+
+    {
+        "flightId":6,
+        "airline" :"Jet Airways",
+        "source":"Chennai",
+        "destination":"Mumbai",
+        "deptDate":"22/10/2022",
+        "deptTime":"10:30",
+        "arrDate":"23/10/2022",
+        "arrTime":"9:30",
+        "price":"6000",
+        "imgURL":"https://www.gstatic.com/flights/airline_logos/70px/6E.png"
+    }
+]

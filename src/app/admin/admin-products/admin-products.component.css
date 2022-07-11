@@ -1,0 +1,8 @@
+.airline-logo{
+    width: 35px;
+    height: 35px;
+}
+
+table.dataTable td.dataTables_empty {
+    display: none;
+}
